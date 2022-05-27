@@ -1,0 +1,91 @@
+1) Посмотреть где я – 
+pwd
+
+2) Создать папку – 
+mkdir group_30_free
+
+3) Зайти в папку –
+cd group_30_free
+
+4) Создать 3 папки – 
+mkdir qa1 ga2 qa3
+
+5) Зайти в любую папку – 
+cd qa1
+
+6) Создать 5 файлов (3 txt, 2 json) –
+touch file1.txt file2.txt file3.txt m.json r.json
+
+7) Создать 3 папки  
+mkdir papka1 papka2 papka3
+
+8. Вывести список содержимого папки – 
+ls -la 
+
+8) + Открыть любой txt файл –
+cat file1.txt
+
+9) + написать туда что-нибудь, любой текст 
+cat >> file1.txt 
+ne vyhodi iz komnaty
+ne sovershai oshibku
+
+10) + сохранить и выйти.
+ Cntrl c
+
+11) Выйти из папки на уровень выше
+ cd ..
+—
+12) переместить любые 2 файла, которые вы создали, в любую другую папку mv qa1/file1.txt qa1/file2.txt qa2
+
+13) скопировать любые 2 файла, которые вы создали, в любую другую папку cp qa2/file1.txt qa2/file2.txt qa1
+
+14) Найти файл по имени find qa1/file1
+                        find qa1 -name "file*"
+
+16) просмотреть содержимое в реальном времени (команда grep) изучите как она работает- 
+                         cd qa1
+                         tail -f file1.txt
+17) вывести несколько первых строк из текстового файла 
+          head -2 file1.txt
+          ne vyhodi iz komnaty
+          ne sovershai oshibku
+
+18) вывести несколько последних строк из текстового файла – 
+           tail -2 file1.txt (выводит последние 2 строки)
+           tail file1.txt (выводит последние 10 строк файла)
+
+19) просмотреть содержимое длинного файла (команда less) изучите как она работает.
+
+20) вывести дату и время date
+
+=========
+
+Задание *
+1) Отправить http запрос на сервер
+
+http://162.55.220.72:5005/terminal-hw-request
+curl “http://162.55.220.72:5005/terminal-hw-request”
+curl "http://162.55.220.72:5005/get_method?name=(Katya)&age=(37)"
+
+2) Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13
+touch katyascript.sh
+vim katyascript.sh
+
+#!/bin/bash
+mkdir group_30_free
+cd group_30_free
+mkdir qa1 ga2 qa3
+cd qa1
+touch file1.txt file2.txt file3.txt m.json r.json
+mkdir papka1 papka2 papka3
+ls -la 
+cat file1.txt
+cd ..
+cp qa1/file1.txt qa1/file2.txt qa2
+echo "proverka script"
+
+запуск -     ./katyascript.sh
+
+
+
