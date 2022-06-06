@@ -1,0 +1,49 @@
+1. На локальном репозитории сделать ветки для:
+- Postman
+- Jmeter
+- CheckLists
+- Bag Reports
+- SQL
+- Charles
+- Mobile testing
+
+Githab – new repository – code – SSH 
+Terminal – git clone – cd QA_Practice - git branch (название ветки) или git chechout -b (название ветки)
+
+2. Запушить все ветки на внешний репозиторий 
+git push -u origin --all
+
+3. В ветке Bag Reports сделать текстовый документ со структурой баг репорта 
+git checkout Bag_Reports
+touch file.txt
+vim -> i -> text -> esc -> :wq Enter
+
+4. Запушить структуру багрепорта на внешний репозиторий 
+git add .
+git commit -m “text”
+git push
+
+5. Вмержить ветку Bag Reports в Main
+Git checkout main
+Git merge Bag_Reports -m “текст”
+
+6. Запушить main на внешний репозиторий.
+Git add .
+Git commit -m “text”
+Git push
+
+7. В ветке CheckLists набросать структуру чек листа.
+git checkout CheckLists
+touch file.txt
+vim -> i -> text -> esc -> :wq Enter
+
+8. Запушить структуру на внешний репозиторий
+git add .
+git commit -m “text”
+git push
+
+9. На внешнем репозитории сделать Pull Request ветки CheckLists в main
+Git Hub – Pull request – compare & pull request – create pull request – merge pull request
+
+10. Синхронизировать Внешнюю и Локальную ветки Main
+Terminal – git checkout main – git pull
