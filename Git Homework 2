@@ -2,19 +2,19 @@
 - Postman
 - Jmeter
 - CheckLists
-- Bag Reports
+- Bug_Reports
 - SQL
 - Charles
 - Mobile testing
 
-Githab – new repository – code – SSH 
+Github – new repository – code – SSH 
 Terminal – git clone – cd QA_Practice - git branch (название ветки) или git chechout -b (название ветки)
 
 2. Запушить все ветки на внешний репозиторий 
-git push -u origin --all
+git push -u --all
 
-3. В ветке Bag Reports сделать текстовый документ со структурой баг репорта 
-git checkout Bag_Reports
+3. В ветке Bug Reports сделать текстовый документ со структурой баг репорта 
+git checkout Bug_Reports
 touch file.txt
 vim -> i -> text -> esc -> :wq Enter
 
@@ -23,9 +23,9 @@ git add .
 git commit -m “text”
 git push
 
-5. Вмержить ветку Bag Reports в Main
+5. Вмержить ветку Bug Reports в Main
 Git checkout main
-Git merge Bag_Reports -m “текст”
+Git merge Bug_Reports -m “текст”
 
 6. Запушить main на внешний репозиторий.
 Git add .
@@ -47,3 +47,12 @@ Git Hub – Pull request – compare & pull request – create pull request – 
 
 10. Синхронизировать Внешнюю и Локальную ветки Main
 Terminal – git checkout main – git pull
+
+
+P.S переименование ветки
+
+git checkout Bag_Reports 
+git branch -m Bag_Reports Bug_Reports
+git push origin :Bag_Reports  - удаление старой ветки
+git push -u origin Bug_Report
+
